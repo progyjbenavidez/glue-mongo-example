@@ -26,7 +26,7 @@ class MongoService:
 
     @classmethod
     def get_mongo_collection(cls):
-        """ Return Mongo collectio  """
+        """ Return Mongo desire collection"""
         conn = pymongo.MongoClient(f'mongodb://{cls.MONGO_DB_USER}:{cls.MONGO_DB_PASSWORD}@{cls.MONGO_DB_HOST}:27017/')
         db = conn[cls.MONGO_DB_DATABASE]
         collection = db[cls.MONGO_COLLECTION_NAME]
@@ -48,7 +48,7 @@ class MongoService:
 
     @classmethod
     def get_docs(cls) -> List:
-        """ Get all docs on collections"""
+        """ Get all docs on collection"""
         print("getting docs from collection......")
         collection  = cls.get_mongo_collection()
         cursor = collection.find({})
