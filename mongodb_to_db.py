@@ -72,7 +72,7 @@ class MongoService:
     def csv_to_db(cls) -> bool:
         """Insert data from CSV to DB """
         df = pd.read_csv(f"{cls.MONGO_COLLECTION_NAME}_docs.csv")
-        df.to_sql('users', con=cls.get_db_engine()) 
+        df.to_sql('<table-name>', con=cls.get_db_engine()) 
     
 
     @classmethod
