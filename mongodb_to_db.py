@@ -83,6 +83,7 @@ class MongoService:
         cls.docs_to_csv()
         print("Inserting record from cvs to db .....")
         cls.csv_to_db()  
-        print("Records were saved succefully ....")   
+        print("Records were saved succefully ....")
+
 if  __name__ == "__main__":
     MongoService.init_process()
